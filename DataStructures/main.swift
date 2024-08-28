@@ -13,13 +13,13 @@ func pop() -> String {
     return popTopItem ?? "Something went wrong"
 }
 
+func peek() -> String {
+    let length = stack.count
+    return stack[length - 1]
+}
+
 push("Kingdom Hearts")
 push("Dark Souls")
 push("Final Fantasy")
 
-print("Initial Values: \(stack)")
-
-let topItem = pop()
-
-print("Removed Value: \(topItem)")
-print("Values after `pop` method: \(stack)")
+print("Top Item: \(peek())")
