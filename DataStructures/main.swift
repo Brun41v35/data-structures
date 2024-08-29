@@ -8,6 +8,7 @@ func push(_ element: String) {
     stack.append(element)
 }
 
+@discardableResult
 func pop() -> String {
     let popTopItem = stack.popLast()
     return popTopItem ?? "Something went wrong"
